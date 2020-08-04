@@ -9,13 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    //数字を格納する場所
+    var count = 0
     //ラベル
     @IBOutlet weak var countLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(countLabel.text)
+        
+        countLabel.text = String(count)
+        
+        
     }
 
     @IBAction func countUpButton(_ sender: Any) {
