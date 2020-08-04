@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         
         countLabel.text = String(count)
         
-        
     }
 
     @IBAction func countUpButton(_ sender: Any) {
@@ -35,6 +34,7 @@ class ViewController: UIViewController {
         count = count - 1
         countLabel.text = String(count)
         
+        //0以下になったら文字の色を赤に変更 メソッドを定義する
         changeColor()
     }
     
@@ -42,6 +42,8 @@ class ViewController: UIViewController {
     func changeColor(){
         if count >= 10{
             countLabel.textColor = UIColor.green
+        }else if count < 0{
+            countLabel.textColor = UIColor.red
         }else{
             countLabel.textColor = UIColor.black
         }
