@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(countLabel.text)
     }
 
     @IBAction func countUpButton(_ sender: Any) {
