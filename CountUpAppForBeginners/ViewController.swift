@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //ラベル
     @IBOutlet weak var countLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +19,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func countUpButton(_ sender: Any) {
+        //+ボタンを押すとラベルの文字をカウントアップ
+        
+        
+        //10以上になったら文字の色を緑に変更
     }
     
     @IBAction func countDounButton(_ sender: Any) {
+         //-ボタンを押すとラベルの文字をカウントダウン
+        
     }
+    
 }
 
