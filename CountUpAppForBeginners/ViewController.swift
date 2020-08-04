@@ -26,16 +26,26 @@ class ViewController: UIViewController {
         //+ボタンを押すとラベルの文字をカウントアップ
         count = count + 1
         countLabel.text = String(count)
-        //10以上になったら文字の色を緑に変更
+        //10以上になったら文字の色を緑に変更 メソッドを定義する
+        changeColor()
     }
     
     @IBAction func countDounButton(_ sender: Any) {
          //-ボタンを押すとラベルの文字をカウントダウン
         count = count - 1
         countLabel.text = String(count)
+        
+        changeColor()
     }
     
-    
+    //ラベルの色を変更するメソッドを定義する
+    func changeColor(){
+        if count >= 10{
+            countLabel.textColor = UIColor.green
+        }else{
+            countLabel.textColor = UIColor.black
+        }
+    }
     
 }
 
