@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     //数字を格納する場所
     var count = 0
-    //ラベル
+    //UIパーツのラベル
     @IBOutlet weak var countLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,8 @@ class ViewController: UIViewController {
         //+ボタンを押すとラベルの文字をカウントアップ
         count = count + 1
         countLabel.text = String(count)
-        //10以上になったら文字の色を緑に変更 メソッドを定義する
+        
+        //カウントにあわせて文字の色を変更
         changeColor()
     }
     
@@ -34,11 +35,12 @@ class ViewController: UIViewController {
         count = count - 1
         countLabel.text = String(count)
         
-        //0以下になったら文字の色を赤に変更 メソッドを定義する
+       //カウントにあわせて文字の色を変更
         changeColor()
     }
     
-    //ラベルの色を変更するメソッドを定義する
+    
+    //カウントにあわせて文字の色を変更するメソッドを定義
     func changeColor(){
         if count >= 10{
             countLabel.textColor = UIColor.green
