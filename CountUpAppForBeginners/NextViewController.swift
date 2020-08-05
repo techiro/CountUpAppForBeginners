@@ -12,6 +12,7 @@ class NextViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     var passdata = 0
+    var senddismissAction: (() -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,7 +20,9 @@ class NextViewController: UIViewController {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {
+            self.senddismissAction?()
+        })
     }
     
     /*

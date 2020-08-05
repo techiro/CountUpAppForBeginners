@@ -11,12 +11,15 @@ import UIKit
 class ViewController: UIViewController {
     //数字を格納する場所
     var count = 0
+    var goal: Int!
     //UIパーツのラベル
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var goalLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        goal = Int.random(in: -20...20)
+        goalLabel.text = "\(goal!)\nまでカウントしよう！"
         countLabel.text = String(count)
         
     }
@@ -25,11 +28,7 @@ class ViewController: UIViewController {
         //+ボタンを押すとラベルの文字をカウントアップ
         count = count + 1
         
-        //画面遷移
-        if count == 2{
-            performSegue(withIdentifier: "next", sender: nil)
-            count = 0
-        }
+        checkGoal()
         
         countLabel.text = String(count)
         
@@ -41,6 +40,9 @@ class ViewController: UIViewController {
     @IBAction func countDounButton(_ sender: Any) {
          //-ボタンを押すとラベルの文字をカウントダウン
         count = count - 1
+        
+        checkGoal()
+        
         countLabel.text = String(count)
         
        //カウントにあわせて文字の色を変更
@@ -51,10 +53,20 @@ class ViewController: UIViewController {
         if segue.identifier == "next"{
             let nextVC = segue.destination as! NextViewController
             nextVC.passdata = count
-            
+            nextVC.senddismissAction = {
+                self.goal = Int.random(in: -20...20)
+                self.goalLabel.text = String(self.goal)
+            }
         }
     }
     
+    //goalかどうかチェックする
+    func checkGoal(){
+        if count == goal{
+            performSegue(withIdentifier: "next", sender: nil)
+            
+        }
+    }
     
     //カウントにあわせて文字の色を変更するメソッドを定義
     func changeColor(){

@@ -38,8 +38,8 @@
                                     <action selector="countDounButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ip6-yM-edu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+20までカウント" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ll2-Rr-Znc">
-                                <rect key="frame" x="132" y="78" width="150" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+20までカウント" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ll2-Rr-Znc">
+                                <rect key="frame" x="80" y="82" width="254" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -51,6 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="4fU-Hx-aJ7" id="lRR-Ec-W1H"/>
+                        <outlet property="goalLabel" destination="ll2-Rr-Znc" id="TOG-c7-PQI"/>
                         <segue destination="315-pn-Jzx" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" id="IZ6-ZT-WQx"/>
                     </connections>
                 </viewController>
