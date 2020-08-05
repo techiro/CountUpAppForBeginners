@@ -24,10 +24,18 @@ class ViewController: UIViewController {
     @IBAction func countUpButton(_ sender: Any) {
         //+ボタンを押すとラベルの文字をカウントアップ
         count = count + 1
+        
+        //画面遷移
+        if count == 2{
+            performSegue(withIdentifier: "next", sender: nil)
+            count = 0
+        }
+        
         countLabel.text = String(count)
         
         //カウントにあわせて文字の色を変更
         changeColor()
+
     }
     
     @IBAction func countDounButton(_ sender: Any) {

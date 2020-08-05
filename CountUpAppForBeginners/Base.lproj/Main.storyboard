@@ -51,6 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="4fU-Hx-aJ7" id="lRR-Ec-W1H"/>
+                        <segue destination="315-pn-Jzx" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" id="IZ6-ZT-WQx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,6 +73,9 @@
                                 <state key="normal" title="戻る">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="315-pn-Jzx" eventType="touchUpInside" id="fPH-Em-jut"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="成功!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPO-LN-fV6">
                                 <rect key="frame" x="160" y="292" width="94" height="48"/>
