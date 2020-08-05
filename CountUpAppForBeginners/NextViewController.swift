@@ -10,10 +10,12 @@ import UIKit
 
 class NextViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var passdata = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        label.text = String(passdata)
     }
     
     @IBAction func backButton(_ sender: Any) {

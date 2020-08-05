@@ -46,6 +46,14 @@ class ViewController: UIViewController {
        //カウントにあわせて文字の色を変更
         changeColor()
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "next"{
+            let nextVC = segue.destination as! NextViewController
+            nextVC.passdata = count
+            
+        }
+    }
     
     
     //カウントにあわせて文字の色を変更するメソッドを定義
