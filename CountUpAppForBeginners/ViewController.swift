@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         countLabel.text = String(count)
         
         //カウントにあわせて文字の色を変更
-        changeColor()
+        changeTextColor()
     }
     
     @IBAction func countDounButton(_ sender: Any) {
@@ -36,12 +36,12 @@ class ViewController: UIViewController {
         countLabel.text = String(count)
         
        //カウントにあわせて文字の色を変更
-        changeColor()
+        changeTextColor()
     }
     
     
     //カウントにあわせて文字の色を変更するメソッドを定義
-    func changeColor(){
+    func changeTextColor(){
         if count >= 10{
             countLabel.textColor = UIColor.green
         }else if count < 0{
