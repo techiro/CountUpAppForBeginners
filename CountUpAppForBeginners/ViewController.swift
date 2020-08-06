@@ -60,6 +60,12 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    @IBSegueAction
+    func makeSettingViewController(coder: NSCoder, sender: Any?, segueIdentifier: String?) -> SettingViewController? {
+        return SettingViewController(coder: coder,passdata: count)
+    }
+    
     //goalかどうかチェックする
     func checkGoal(){
         if count == goal{

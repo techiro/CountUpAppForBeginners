@@ -14,6 +14,7 @@
 		03A3BBCE24D95E3F002FAFA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A3BBCD24D95E3F002FAFA9 /* Assets.xcassets */; };
 		03A3BBD124D95E3F002FAFA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A3BBCF24D95E3F002FAFA9 /* LaunchScreen.storyboard */; };
 		03A3BBDD24DA706A002FAFA9 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A3BBDC24DA706A002FAFA9 /* NextViewController.swift */; };
+		03C11AC324DB79F700B7F72D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C11AC224DB79F700B7F72D /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		03A3BBD024D95E3F002FAFA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03A3BBD224D95E3F002FAFA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A3BBDC24DA706A002FAFA9 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		03C11AC224DB79F700B7F72D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				03A3BBC824D95E36002FAFA9 /* ViewController.swift */,
 				03A3BBDC24DA706A002FAFA9 /* NextViewController.swift */,
 				03A3BBCA24D95E36002FAFA9 /* Main.storyboard */,
+				03C11AC224DB79F700B7F72D /* SettingViewController.swift */,
 				03A3BBCD24D95E3F002FAFA9 /* Assets.xcassets */,
 				03A3BBCF24D95E3F002FAFA9 /* LaunchScreen.storyboard */,
 				03A3BBD224D95E3F002FAFA9 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C11AC324DB79F700B7F72D /* SettingViewController.swift in Sources */,
 				03A3BBC924D95E36002FAFA9 /* ViewController.swift in Sources */,
 				03A3BBDD24DA706A002FAFA9 /* NextViewController.swift in Sources */,
 				03A3BBC524D95E36002FAFA9 /* AppDelegate.swift in Sources */,
