@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         countLabel.text = String(count)
-        
+        countLabel.textColor = UIColor.blue
     }
 
     @IBAction func countUpButton(_ sender: Any) {
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         }else if count < 0{
             countLabel.textColor = UIColor.red
         }else{
-            countLabel.textColor = UIColor.black
+            countLabel.textColor = UIColor.blue
         }
     }
     
