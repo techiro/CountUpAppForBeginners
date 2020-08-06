@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             nextVC.passdata = count
             nextVC.senddismissAction = {
                 self.goal = Int.random(in: -20...20)
-                self.goalLabel.text = String(self.goal)
+                self.goalLabel.text = ("\(String(self.goal))\nまでカウントしよう！")
             }
         }
     }
