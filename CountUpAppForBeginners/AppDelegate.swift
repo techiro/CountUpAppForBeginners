@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications //<-通知のライブラリを使いますと宣言する
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // 通知許可の取得
+        UNUserNotificationCenter.current().requestAuthorization(
+        options: [.alert, .sound, .badge]){ //許可を取るもの:
+                                            // .alert -> 通知のポップアップを許可するか,
+                                            // .sound -> 通知音が鳴るようにしてもいいか,
+                                            // .badge -> 通知時にアプリアイコンに通知数を表示するか
+            (granted, _) in
+            if granted{
+                UNUserNotificationCenter.current().delegate = self
+            }
+        }
+
         return true
     }
 
@@ -35,3 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // アプリ起動中でも通知させる
+        completionHandler([.alert, .sound])
+    }
+}
