@@ -5,7 +5,7 @@
 
 簡単なカウントアップアプリの作成から、XcodeとSwiftの使い方を学ぶことができます。
 
-##Qiitaの記事で細かく進め方を書いてるので参考にしてください！
+## Qiitaの記事で細かく進め方を書いてるので参考にしてください！
 - [[Swift]カウントアップアプリを作ってSwiftを触ってみよう](https://qiita.com/appgrape/items/ead85f5267d4d7894084)
 
 - [[Swift勉強会] カウントアップアプリを改造して,通知をn秒後に通知を出してみる (n>0)](https://qiita.com/tessy0901/items/c261359880f1bc2d80b5)
